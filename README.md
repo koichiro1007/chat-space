@@ -33,5 +33,5 @@
 |text|text|null: false|
 
 ### Association
-- has_many :groups_users
+- has_many :users_users
 
