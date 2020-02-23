@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+// この設定をすることで、paddingやborderの設定を行っても、要素の大きさがwidthやheightで指定したサイズのまま変わらなくなります。
+
+
+.wrapper{
+  display: flex;
+  justify-content: left;
+}
+
+
+// 左側
+.side_bar{ 
+  width: 300px;
+
+  // 左上の部分
+  &__user-name{
+    width: 300px;
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    // 見えてない中心部分の枠
+    .top-items{
+      width: 260px;
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      // 左側のユーザー名
+      &__name{
+        color: white;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      // 右側のアイコン
+      &__icons{
+        display: flex;
+        justify-content: right;
+        &__edit_icon{
+          color: white;
+          text-decoration: none;
+          margin-right: 5px;
+        }
+        &__cog_icon{
+          color: white;
+        }
+      }
+    }
+  }
+
+
+  
+
+
+  // 左下の部分
+  &__list{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    width: 300px;
+    padding: 20px;
+
+    &__group{
+      margin-bottom: 40px;
+
+      &__name{
+        font-size: 15px;
+        margin-bottom: 5px;
+        color:#ffffff;
+      }
+
+
+      &__message{
+        font-size: 11px;
+        color: #ffffff;
+      }
+    } 
+  }
+}
+  
+
+
+
+
+
+// 右側
+.chat{
+  width: calc(100vw - 300px);
+
+
+  // 右上のグループ名とメンバーの部分
+  &__group-info{
+    height: 100px;
+    background-color:#ffffff;
+    border-bottom:1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px 0px;
+
+
+    // 左側部分
+    &__left{
+      margin-top: 35px;
+
+      // グループ名
+      &__group{
+        font-size: 20px;
+        color: #333333;
+        margin-bottom: 15px;
+      }
+
+      // 参加メンバー
+      &__member{
+        display: flex;
+        justify-content: left;
+        list-style: none;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+
+    // 右側のEditボタン
+    &__right{
+      width: 72px;
+      height: 40px;
+      border: 1px solid #38aef0; 
+      text-decoration: none;
+      color:  #38aef0;
+      line-height: 40px;
+      text-align: center;
+
+    }
+  }
+
+  // チャット会話の部分
+  &__list{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+
+
+    // 一人分の投稿
+    &__message{
+
+
+      // 投稿者と日時
+      &__info{
+        display: flex;
+        justify-content: left;
+        margin-bottom: 10px;
+
+
+        &__name{
+          color: #333333;
+          font-size: 16px;
+        }
+
+        &__date{
+          font-size: 12px;
+          color: #999999;
+          margin-left: 10px;
+          }
+        }
+
+      // 投稿のテキスト
+      &__text{
+        color: #434A54;
+        font-size: 14px;
+        margin-bottom: 10px;
+        }
+      }
+    }
+    
+
+
+
+
+  // 下のメッセージ送信部分
+  &__form{
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+    
+    // メッセージを打ち込む部分
+    &__message{
+      display: flex;
+
+      // 入力フォーム
+      &__input{
+        height: 50px;
+        width: 100%;
+        background-color: white;
+        position: relative;
+        
+        // 文字を入力する部分
+        &__type{
+          width: 100%;
+          height: 50px;
+          padding: 0px 40px 0px 10px;
+        }
+
+
+        // 画像のアイコン
+        &__image{
+          position: absolute;
+          line-height: 50px;
+          right: 10px;
+          
+          &__file{
+            display: none;
+          }
+        }
+
+
+      }
+      // 送信ボタン
+      &__send{
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        margin-left: 15px;
+        text-decoration: none;
+        text-align: center;
+        background-color: #38aef0;
+        color: white;
+
+      }
+    }
+  }
+}
+

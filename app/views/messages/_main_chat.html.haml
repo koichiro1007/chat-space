@@ -1,0 +1,45 @@
+.chat
+  .chat__group-info
+    .chat__group-info__left
+      .chat__group-info__left__group
+        test
+      %ul.chat__group-info__left__member
+        %li
+        Member :
+        %li
+        masa
+    = link_to "#", class: "chat__group-info__right" do
+      Edit 
+
+  .chat__list
+    .chat__list__message
+      .chat__list__message__info
+        .chat__list__message__info__name
+          masa
+        .chat__list__message__info__date
+          2020/2/22(wed) 16:29:01
+      .chat__list__message__text
+        おはよう
+    .chat__list__message
+      .chat__list__message__info
+        .chat__list__message__info__name
+          masa2
+        .chat__list__message__info__date
+          2020/2/22(wed) 16:29:01
+      .chat__list__message__text
+        おはよう2
+
+
+
+
+
+      
+  .chat__form
+    .chat__form__message
+      .chat__form__message__input
+        %input{type: "text", class: "chat__form__message__input__type", placeholder: "type a message"}
+        %label{class: "chat__form__message__input__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "chat__form__message__input__image__file"}
+      = link_to "#", class: "chat__form__message__send" do
+        send 
