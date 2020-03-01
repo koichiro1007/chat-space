@@ -64,6 +64,7 @@
     height: calc(100vh - 100px);
     width: 300px;
     padding: 20px;
+    overflow: scroll;
 
     &__group{
       margin-bottom: 40px;
@@ -148,6 +149,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 46px 40px;
+    overflow: scroll;
 
 
     // 一人分の投稿
