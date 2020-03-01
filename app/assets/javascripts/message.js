@@ -56,10 +56,12 @@ $('#new_message').on('submit', function(e){
   $('.chat__list').append(html);
   $('.chat__list').animate({ scrollTop: $('.chat__list')[0].scrollHeight});
   $('form')[0].reset();
-  $(".chat__form__send").prop("disabled", false);
 })
  .fail(function() {
    alert("メッセージに失敗しました");
  })
+ .always(function() {
+  $(".chat__form__send").prop("disabled", false);
+});
 })
 });
