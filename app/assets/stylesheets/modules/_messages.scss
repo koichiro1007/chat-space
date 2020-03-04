@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none
 }
 // この設定をすることで、paddingやborderの設定を行っても、要素の大きさがwidthやheightで指定したサイズのまま変わらなくなります。
 
@@ -65,10 +66,10 @@
     width: 300px;
     padding: 20px;
     overflow: scroll;
+    
 
     &__group{
       margin-bottom: 40px;
-      
 
       &__name{
         font-size: 15px;
